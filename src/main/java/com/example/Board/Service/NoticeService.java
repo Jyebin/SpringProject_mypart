@@ -44,7 +44,7 @@ public class NoticeService {
         List<NoticeInput> noticeList = new ArrayList<>();
         List<NoticeEntity> allNotices = noticeRepository.findAll(); //데베에서 모든 정보 갖고오기
         for(NoticeEntity notice : allNotices){
-            NoticeInput noticeInput = new NoticeInput(notice.getRegDate(),notice.getUpdateDate(),notice.getTitle(),notice.getContent()); //조회수 증가하려면 ?
+            NoticeInput noticeInput = new NoticeInput(notice.getId(), notice.getRegDate(),notice.getUpdateDate(),notice.getTitle(),notice.getContent()); //조회수 증가하려면 ?
             noticeList.add(noticeInput);
         }
         return noticeList;
@@ -62,7 +62,6 @@ public class NoticeService {
 
         NoticeEntity notice = noticeRepository.findById(id)
                 .orElseThrow(() -> new NoticeNotFoundException("공지사항의 글이 존재하지 않습니다."));
-
         notice.setTitle(noticeInput.getTitle());
         notice.setContent(noticeInput.getContent());
         notice.setUpdateDate(LocalDateTime.now());

@@ -23,7 +23,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-public class ApiNoticeController {
+public class NoticeController {
     NoticeRepository noticeRepository;
     @Autowired
     private NoticeService noticeService;

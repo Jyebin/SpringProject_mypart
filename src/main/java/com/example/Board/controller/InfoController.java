@@ -6,7 +6,6 @@ import com.example.Board.entity.InfoEntity;
 import com.example.Board.exception.*;
 import com.example.Board.repository.InfoInput;
 import com.example.Board.repository.InfoRepository;
-import jakarta.persistence.TypedQuery;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

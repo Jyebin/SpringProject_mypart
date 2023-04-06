@@ -1,11 +1,13 @@
 package com.example.Board.Service;
 
 import com.example.Board.entity.InfoEntity;
+import com.example.Board.entity.NoticeEntity;
 import com.example.Board.exception.AlreadyDeletedException;
 import com.example.Board.exception.DuplicateInfoException;
 import com.example.Board.exception.InfoNotFoundException;
 import com.example.Board.repository.InfoInput;
 import com.example.Board.repository.InfoRepository;
+import com.example.Board.repository.NoticeInput;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -37,11 +39,12 @@ public class InfoService {
         List<InfoEntity> allInfo = infoRepository.findAll();
         for(InfoEntity info : allInfo){
             info.addViewCount(); // 조회수 증가
-            InfoInput infoInput = new InfoInput(info.getViewCount());
+            InfoInput infoInput = new InfoInput(info.getId(),info.getRegDate(),info.getUpdateDate(),info.getTitle(),info.getContent());
             infoList.add(infoInput);
         }
         return infoList;
     }
+
     public List<InfoInput> addLike(Long id){ //좋아요 증가
         Optional<InfoEntity>optionalInfo = infoRepository.findById(id);
         if(optionalInfo.isPresent()){

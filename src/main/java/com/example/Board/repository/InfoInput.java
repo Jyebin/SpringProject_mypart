@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 public class InfoInput {
+    private Long id;
     private int viewCount;
     private int likes;
     private int hates;
@@ -26,13 +27,11 @@ public class InfoInput {
     @Size(min = 10, max = 100, message = "제목은 10자 이상 100자 이하로 입력해주세요.")
     private String content;
 
-    public InfoInput(int viewCount) {
+    public InfoInput(Long id, LocalDateTime regDate, LocalDateTime updateDate, String title, String content) {
+        this.id = id;
         this.regDate = regDate;
         this.updateDate = updateDate;
         this.title = title;
         this.content = content;
-        this.viewCount = viewCount;
-        this.hates = hates;
-        this.likes = likes;
     }
 }

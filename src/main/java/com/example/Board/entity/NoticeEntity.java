@@ -42,6 +42,5 @@ public class NoticeEntity {
     public void increaseViews() {
         this.increaseCount++;
     }
-
 }
 
