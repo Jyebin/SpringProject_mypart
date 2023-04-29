@@ -50,6 +50,7 @@ public class NoticeController {
     public ResponseEntity<?>getNoticeById(@PathVariable(value = "id") Long id){ //noticedto객체의 id값으로 매핑됨
         Optional<NoticeDto> noticeDtoId = noticeService.getNoticeById(id);
         if(noticeDtoId.isPresent()){
+            noticeService.increaseViews(id);
             return ResponseEntity.ok().body(noticeDtoId.get());
         }else{
             return ResponseEntity.notFound().build();
@@ -58,7 +59,6 @@ public class NoticeController {
     @DeleteMapping("/api/notice/{id}") //공지사항 한개씩 삭제
     public ResponseEntity<?>deleteId(@PathVariable(value = "id") Long id){
         Long deleteId2 = noticeService.deleteId(id);
-
         if (deleteId2==null){
             return ResponseEntity.ok().body(deleteId2);
         }else{
@@ -67,8 +67,8 @@ public class NoticeController {
     }
     //공지사항 수정
     @PutMapping("/api/notice/{id}")
-    public ResponseEntity<?>updateNotice(@PathVariable(value = "id")NoticeDto noticeDto){
-        Optional<NoticeDto>updateNotice = noticeService.updateNotice(noticeDto);
+    public ResponseEntity<?>updateNotice(@PathVariable(value = "id")Long id, @RequestBody NoticeDto noticeDto){
+        Optional<NoticeEntity> updateNotice = noticeService.updateNotice(id, noticeDto);
         if(updateNotice.isPresent()){
             return ResponseEntity.ok().body(updateNotice);
         }else{

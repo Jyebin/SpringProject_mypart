@@ -27,12 +27,7 @@
 //            AuthenticationConfiguration authenticationConfiguration) throws Exception {
 //        return authenticationConfiguration.getAuthenticationManager();
 //    }
-
-    //    @Bean
-//    public WebSecurityCustomizer webSecurityCustomizer() {
-//        return (web) -> web.ignoring()
-//                .antMatchers(HttpMethod.POST, "/api/user/**");
-//    }
+//
 //    @Bean
 //    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 //        http
@@ -52,12 +47,12 @@
 //                .and()
 //                .exceptionHandling()
 //                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
-//        //;
+//
 //        http.userDetailsService(userDetailsService);
 //
 //        return http.build();
 //    }
-
+//
 //    @Bean
 //    public AuthenticationManager authenticationManager2(HttpSecurity http, PasswordEncoder passwordEncoder, UserDetailsService userDetailService) //인증 구성을 위한 빌더 클래스
 //            throws Exception {

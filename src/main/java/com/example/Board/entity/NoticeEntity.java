@@ -39,9 +39,6 @@ public class NoticeEntity {
     @Column
     private int increaseCount; //조회수
 
-    @Column
-    private boolean deleted;  // 삭제 여부
-
     public void increaseViews() {
         this.increaseCount++;
     }

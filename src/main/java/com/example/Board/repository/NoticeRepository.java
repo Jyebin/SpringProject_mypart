@@ -25,6 +25,7 @@ public interface NoticeRepository extends JpaRepository<NoticeEntity,Long> {
 
     //게시글 삭제
     //void delete(NoticeEntity noticeEntity);
+
     //기타
     int countByTitleAndContentAndRegDateIsGreaterThanEqual(String title, String content, LocalDateTime regDate);
 //    List<NoticeEntity>search(String keyword);
