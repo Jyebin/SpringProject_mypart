@@ -1,7 +1,6 @@
 package com.example.Board.repository;
 
 import com.example.Board.entity.InfoEntity;
-import com.example.Board.entity.NoticeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -18,6 +17,4 @@ public interface InfoRepository extends JpaRepository<InfoEntity, Long> {
     List<InfoEntity> findAll();
     List<InfoEntity>findByTitleContainingOrContentContaining(String title, String content);
     int countByTitleAndContentAndRegDateIsGreaterThanEqual(String title, String content, LocalDateTime regDate);
-
-
 }

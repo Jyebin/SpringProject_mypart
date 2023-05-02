@@ -19,7 +19,7 @@ public class NoticeDto {
     private Long id;
     private LocalDateTime regDate;
     private LocalDateTime updateDate;
-    private int increaseCount;
+    private int increaseCount; //조회수
 
     @NotEmpty(message = "제목은 필수 항목 입니다.")
     @Size(min = 1, max = 30, message = "제목은 1자 이상 30자 이하로 입력해주세요.")

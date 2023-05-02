@@ -7,7 +7,6 @@ import com.example.Board.exception.DuplicateNoticeException;
 import com.example.Board.exception.InfoNotFoundException;
 import com.example.Board.exception.NoticeNotFoundException;
 import com.example.Board.repository.NoticeRepository;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

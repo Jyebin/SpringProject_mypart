@@ -61,3 +61,5 @@ public class InfoDto {
         return new InfoEntity(this.id, this.title, this.content, this.regDate, this.updateDate, 0);
     }
 }
+
+

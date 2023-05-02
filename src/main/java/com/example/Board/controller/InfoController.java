@@ -31,7 +31,7 @@ public class InfoController {
             });
             return new ResponseEntity<>(responseErrors, HttpStatus.BAD_REQUEST);
         }
-        try{
+        try{ //동일한 내용이 있을 경우
             infoService.addInfo(infoDto);
         }catch(DuplicateNoticeException e){
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
