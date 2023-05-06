@@ -16,15 +16,18 @@ public class UserSignupService {
     }
     @Autowired
     private PasswordEncoder passwordEncoder;
-
     public UserEntity signup(LoginRequestDto loginRequestDto) {
-        if (userRepository.findByEmail(loginRequestDto.getEmail()).isPresent()) {
+        if(userRepository.findByEmail(loginRequestDto.getEmail()).isPresent()) {
             throw new RuntimeException("가입된 이메일이 이미 존재합니다.");
         }
+        if(loginRequestDto.getName().isBlank() || loginRequestDto.getEmail().isBlank() || loginRequestDto.getPassword().isBlank()) {
+            throw new IllegalArgumentException("이름, 이메일, 비밀번호를 모두 입력해주세요.");
+        }
         UserEntity user = new UserEntity();
+        user.setName(loginRequestDto.getName());
         user.setEmail(loginRequestDto.getEmail());
         user.setPassword(passwordEncoder.encode(loginRequestDto.getPassword()));
+
         return userRepository.save(user);
     }
-
 }

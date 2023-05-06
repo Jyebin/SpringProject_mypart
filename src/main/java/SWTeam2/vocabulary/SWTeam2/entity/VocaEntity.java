@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
 public class VocaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +20,8 @@ public class VocaEntity {
     @Column
     private String vocamean; //단어 뜻
 
+    public VocaEntity(String voca, String vocamean) {
+        this.voca = voca;
+        this.vocamean = vocamean;
+    }
 }

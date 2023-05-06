@@ -22,6 +22,9 @@ public class UserEntity {
 
     @Enumerated(EnumType.STRING)
     private Authority authority;
+    public void setName(String name){
+        this.name = name;
+    }
 
     public void setEmail(String email) {
         this.email = email;
@@ -30,6 +33,12 @@ public class UserEntity {
     public void setPassword(String password) {
         this.password = password;
     }
+
     @Builder
-    public UserEntity(String email, String password, String name, )
+    public UserEntity(String email, String password, String name, Authority authority){
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.authority = authority;
+    }
 }

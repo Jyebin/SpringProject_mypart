@@ -2,6 +2,7 @@ package SWTeam2.vocabulary.SWTeam2.repository;
 
 import SWTeam2.vocabulary.SWTeam2.entity.VocaEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
@@ -18,5 +19,7 @@ public interface VocaRepository extends JpaRepository<VocaEntity,Integer> {
     List<VocaEntity> findAll();
     int countByVocaAndVocamean(String voca, String vocamean);
     List<VocaEntity>findByVocaContainingOrVocamean(String voca, String vocamean);
-
+    @Query(value = "SELECT COUNT (*) FROM VocaEntity WHERE id >= 1451")
+    int countByStartingId();
+    List<VocaEntity> findByIdGreaterThanEqual(int id);
 }

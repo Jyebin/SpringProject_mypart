@@ -22,11 +22,27 @@ public class VocaService {
 
     //단어 추가
     public void addVoca(VocaDto vocaDto){
+        int count = vocaRepository.countByStartingId();
+        if(count == 0){
+            vocaRepository.save(vocaDto.ToEntity());
+        }else{
+            List<VocaEntity>vocaEntities = vocaRepository.findByIdGreaterThanEqual(1451);
+            int lastId = vocaEntities.get(vocaEntities.size()-1).getId();
+            VocaEntity vocaEntity = new VocaEntity();
+            vocaEntity.setVoca(vocaDto.getVoca());
+            vocaEntity.setVocamean(vocaDto.getVocamean());
+            if(vocaDto.getId() == null){
+                vocaEntity.setId(lastId + 1); //DB에 저장된 같은 id 값이 없다면 id값을 1 증가시켜서 저장
+            }else if(vocaDto.getId()<=lastId){
+                throw new IllegalArgumentException("중복된 id값이 있습니다.");
+            }else{
+                vocaEntity.setId(vocaDto.getId());
+            }
+            vocaRepository.save(vocaEntity);
+        }
         int vocaCount = vocaRepository.countByVocaAndVocamean(vocaDto.getVoca(),vocaDto.getVocamean());
         if(vocaCount>0){
             throw new ExceptionMessage("이미 저장된 단어입니다.");
-        }else{
-            vocaRepository.save(vocaDto.ToEntity());
         }
     }
     public Optional<VocaEntity> updateVoca(int id, VocaDto vocaDto){

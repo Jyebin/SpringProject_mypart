@@ -1,5 +1,6 @@
 package SWTeam2.vocabulary.SWTeam2.controller;
 
+import SWTeam2.vocabulary.SWTeam2.dto.FindPasswordDto;
 import SWTeam2.vocabulary.SWTeam2.dto.LoginRequestDto;
 import SWTeam2.vocabulary.SWTeam2.entity.UserEntity;
 import SWTeam2.vocabulary.SWTeam2.service.UserService;
@@ -8,6 +9,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,12 +35,10 @@ public class UserController {
 
     private final UserSignupService userSignupService;
 
-
     @PostMapping("/api/user/signup")
     public UserEntity signup(@RequestBody LoginRequestDto loginRequestDto){
         return userSignupService.signup(loginRequestDto);
     }
-
     @PostMapping("/api/user/login") //로그인
     public ResponseEntity<?> login(HttpServletRequest request, HttpServletResponse response,
                                    @RequestBody LoginRequestDto loginRequestDto){
@@ -65,8 +65,13 @@ public class UserController {
         response.addCookie(cookie); //클라이언트에게 응답으로 보낼 쿠키를 추가
         return new ResponseEntity(HttpStatus.OK); //인증 성공 시 반환
     }
-
-
-
-
+    @PostMapping("/api/findpassword")
+    public ResponseEntity<?> findPassword(@RequestBody @Valid LoginRequestDto loginRequestDto){
+        try {
+            String password = userService.findPassword(loginRequestDto);
+            return ResponseEntity.ok("비밀번호 찾기 결과 : " + password);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

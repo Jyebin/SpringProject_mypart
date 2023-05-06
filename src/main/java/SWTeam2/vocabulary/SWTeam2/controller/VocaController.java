@@ -23,7 +23,7 @@ import java.util.*;
 public class VocaController {
     @Autowired
     private VocaService vocaService;
-    @PreAuthorize("admin")
+    @PreAuthorize("ROLE_ADMIN")
     @PostMapping("/api/addvoca") //단어 추가
     public ResponseEntity<?>addVoca(@RequestBody @Valid VocaDto vocaDto, Errors errors){
         if(errors.hasErrors()){
@@ -39,7 +39,7 @@ public class VocaController {
         }
         return ResponseEntity.ok().build();
         }
-    @PreAuthorize("admin")
+    @PreAuthorize("ROLE_ADMIN")
     @PutMapping("/api/updatevoca/{id}") //단어 수정
     public ResponseEntity<?>updateVoca(@PathVariable(value = "id")int id, @RequestBody VocaDto vocaDto){
         Optional<VocaEntity>updateVoca = vocaService.updateVoca(id, vocaDto);
@@ -57,6 +57,7 @@ public class VocaController {
 
         return ResponseEntity.ok().body(result);
     }
+
     @GetMapping("/api/findvoca/{id}") //id별로 단어 조회
     public ResponseEntity<?>getVocaById(@PathVariable(value = "id")int id){
         Optional<VocaDto>vocaDtoId = vocaService.getVocaById(id);
@@ -66,7 +67,7 @@ public class VocaController {
             return ResponseEntity.notFound().build();
         }
     }
-    @PreAuthorize("admin")
+    @PreAuthorize("ROLE_ADMIN")
     @DeleteMapping("/api/deletevoca/{id}") //id별로 단어 삭제
     public ResponseEntity<?>deleteVoca(@PathVariable(value = "id")int id){
             long deleteVoca = vocaService.deleteVoca(id);
