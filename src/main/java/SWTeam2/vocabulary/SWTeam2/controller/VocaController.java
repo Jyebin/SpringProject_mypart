@@ -50,7 +50,7 @@ public class VocaController {
         }
     }
     @GetMapping("/api/allvoca") //단어장 전부 조회
-    public ResponseEntity<?>getAllVoca(@PathVariable(required = false)String keyword){
+    public ResponseEntity<?>getAllVoca(@RequestParam(required = false)String keyword){
         List<VocaDto> vocaDtos = vocaService.getAllVoca(keyword);
         Map<String, Object>result = new HashMap<>();
         result.put("voca",vocaDtos);
@@ -76,6 +76,9 @@ public class VocaController {
             }else{
                 return ResponseEntity.notFound().build();
             }
-        }
+    }
+//    @PostMapping("/api/addgroup")
+//    public ResponseEntity<?>addGroupVoca(@RequestParam int id, @RequestParam)
+
 }
 

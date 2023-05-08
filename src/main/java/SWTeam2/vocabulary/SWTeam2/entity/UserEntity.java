@@ -4,19 +4,27 @@ import SWTeam2.vocabulary.SWTeam2.auth.Authority;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Getter
+@Setter
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column
     private String email; //이메일 = 닉네임
+
     @Column
     private String name;
+
     @Column
     private String password; //비밀번호
+
+    @Column
+    private int level = 0; //1 : 하, 2 : 중, 3 : 상
 
     public UserEntity(){}
 

@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Builder
 @AllArgsConstructor
@@ -15,13 +18,14 @@ public class VocaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; //단어 번호
-    @Column
+    @Column(name = "voca")
     private String voca; //단어 이름
-    @Column
+    @Column(name = "vocamean")
     private String vocamean; //단어 뜻
 
     public VocaEntity(String voca, String vocamean) {
         this.voca = voca;
         this.vocamean = vocamean;
     }
+
 }

@@ -63,6 +63,7 @@ public class UserController {
         cookie.setMaxAge(30000 * 60); //쿠키의 유효기간[s]. 30분
 //        cookie.setSecure(true); //쿠키가 https 프로토콜을 통해서만 전송되도록 설정
         response.addCookie(cookie); //클라이언트에게 응답으로 보낼 쿠키를 추가
+
         return new ResponseEntity(HttpStatus.OK); //인증 성공 시 반환
     }
     @PostMapping("/api/findpassword")

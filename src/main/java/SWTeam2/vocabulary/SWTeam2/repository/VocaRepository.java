@@ -22,4 +22,5 @@ public interface VocaRepository extends JpaRepository<VocaEntity,Integer> {
     @Query(value = "SELECT COUNT (*) FROM VocaEntity WHERE id >= 1451")
     int countByStartingId();
     List<VocaEntity> findByIdGreaterThanEqual(int id);
+
 }
