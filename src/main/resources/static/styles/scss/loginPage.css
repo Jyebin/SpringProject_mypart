@@ -1,0 +1,305 @@
+body {
+  background-color: #cfe3ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+input {
+  border: none;
+}
+body {
+  width: 144rem;
+}
+.wallPaper {
+  width: 100%;
+  height: 102.4rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #cfe3ff;
+}
+.wallPaper .titleBox {
+  width: 46rem;
+  height: 11rem;
+  position: absolute;
+  left: 49rem;
+  top: 14rem;
+  text-align: center;
+  font-size: 6.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: blur(0.2rem);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+}
+
+.wallPaper .titleText {
+  width: 46rem;
+  height: 11rem;
+  position: absolute;
+  left: 49rem;
+  top: 14rem;
+  text-align: center;
+  font-size: 6.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+}
+
+.wallPaper .itemBox {
+  width: 79.7rem;
+  height: 83.4rem;
+  position: absolute;
+  left: 32.1rem;
+  top: 7.7rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.wallPaper .itemBox .item-900--DRz {
+  margin: 0rem 0rem 16.5rem 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp {
+  box-sizing: border-box;
+  padding: 4.35rem 11.3rem 3rem 11rem;
+  height: 65rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.6000000238);
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+
+
+.wallPaper .itemBox .auto-group-gnwk-Ucp .item--avk {
+  margin: 0rem 0rem 3.5rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .idText {
+  margin: 0rem 42.8rem 0.25rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .inputId {
+  margin: 0rem 0rem 2.75rem 0.4rem;
+  box-sizing: border-box;
+  padding: 2rem 2.55rem;
+  width: 57rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+
+.wallPaper .itemBox .auto-group-gnwk-Ucp .inputId::placeholder {
+  text-align: center;
+  color: #c0c0c0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .pwText {
+  margin: 0rem 47.5rem 0.65rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .inputPw {
+  margin: 0rem 0rem 1.4rem 0.4rem;
+  box-sizing: border-box;
+  padding: 1.95rem 2.5rem 2.05rem 2.5rem;
+  width: 57rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .inputPw::placeholder {
+  text-align: center;
+  color: #c0c0c0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .aTags {
+  margin-left: 33.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.wallPaper .itemBox .auto-group-gnwk-Ucp .aTags > a {
+  color: #000000;
+  text-decoration: none;
+}
+.wallPaper .img1 {
+  width: 18.7rem;
+  height: 29rem;
+  position: relative;
+  left: 0;
+  top: 73.4rem;
+  background-size: 211.712% 104.223%;
+  background-position: -20.8901rem -0.6123rem;
+  background-image: url("../assets/-nHW.png");
+}
+.wallPaper .img2 {
+  width: 21rem;
+  height: 29.9rem;
+  position: relative;
+  left: 123rem;
+  top: 72.5rem;
+  background-size: 198.4% 102.154%;
+  background-position: -0rem -0.322rem;
+  background-image: url("../assets/-RnQ.png");
+}
+.wallPaper .logBtn {
+  width: 16.2rem;
+  height: 7.9rem;
+  left: 63.9rem;
+  top: 79.4rem;
+  font-size: 5.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+  margin-top: 5rem
+}
+
+.wallPaper .itemBox .auto-group-gnwk-Ucp > button:hover {
+  color: #6273c8;
+  border: 0.5px white solid;
+}
+
+.failedMsg {
+  margin: 0rem 0rem 10rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #f35c6e;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.email--hGU {
+  margin-bottom: 13.3rem;
+  max-width: 60rem;
+  margin: auto 0 auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  flex-shrink: 0;
+}
+
+
+#msg {
+  margin-left: 30rem;
+  /* margin-top: -2rem; */
+  /* margin-bottom: 2rem; */
+  display: absolue;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #f35c6e;
+  font-family: Jua, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+#failedMsg{
+  display: none;
+}
+

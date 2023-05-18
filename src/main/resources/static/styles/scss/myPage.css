@@ -1,0 +1,212 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.item--fqA {
+  box-sizing: border-box;
+  padding-top: 13.9rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-color: #cfe3ff;
+}
+.item--fqA .item-2-PWG {
+  margin-right: 16.5rem;
+  width: 18.7rem;
+  height: 29rem;
+  position: relative;
+  background-size: 211.712% 104.223%;
+  background-position: -20.8901rem -0.6123rem;
+  background-image: url('../assets/-mdJ.png');
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W {
+  margin: 0rem 14.3rem 18.7rem 0rem;
+  width: 73.5rem;
+  height: 69.8rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .rectangle-2-Pua {
+  width: 73.5rem;
+  height: 65rem;
+  position: absolute;
+  left: 0;
+  top: 4.8rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+.item--fqA .auto-group-dnjj-V3W .person-1-WzC {
+  width: 29.5rem;
+  height: 6.55rem;
+  position: absolute;
+  left: 21.1rem;
+  top: 10.8rem;
+  display: flex;
+  align-items: flex-end;
+}
+.item--fqA .auto-group-dnjj-V3W .person-1-WzC .person-1-r2U {
+  margin-bottom: 0.05rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .person-1-WzC .item--z8g {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .clip-1-tUx {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  left: 32.8rem;
+  top: 0;
+  object-fit: cover;
+  vertical-align: top;
+}
+.item--fqA .auto-group-dnjj-V3W .rectangle-10-DXE {
+  width: 20rem;
+  height: 6rem;
+  position: absolute;
+  left: 4.3rem;
+  top: 60.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 1rem;
+}
+.item--fqA .auto-group-dnjj-V3W .rectangle-11-5JY {
+  width: 20rem;
+  height: 6rem;
+  position: absolute;
+  left: 49.7rem;
+  top: 60.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 1rem;
+}
+.item--fqA .auto-group-dnjj-V3W .item--LkG {
+  width: 51.8rem;
+  height: 32.5rem;
+  position: absolute;
+  left: 4.55rem;
+  top: 22.2rem;
+  row-gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.item--fqA .auto-group-dnjj-V3W .item--LkG .item--qwv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #5f5f5f;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .item--LkG .email-abcdenavercom-xWk {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #5f5f5f;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .item--LkG .abcd-UV6 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #5f5f5f;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .item--LkG .item--DBn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #5f5f5f;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--fqA .auto-group-dnjj-V3W .item--LkG .item-382-83r {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #5f5f5f;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--fqA .item-3-dFW {
+  width: 21rem;
+  height: 29.9rem;
+  position: relative;
+  background-size: 198.4% 102.154%;
+  background-position: -0rem -0.322rem;
+  background-image: url('../assets/-saQ.png');
+  flex-shrink: 0;
+}

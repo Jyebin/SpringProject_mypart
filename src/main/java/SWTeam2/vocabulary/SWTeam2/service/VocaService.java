@@ -1,8 +1,11 @@
 package SWTeam2.vocabulary.SWTeam2.service;
 
 import SWTeam2.vocabulary.SWTeam2.dto.VocaDto;
+import SWTeam2.vocabulary.SWTeam2.entity.UserEntity;
+import SWTeam2.vocabulary.SWTeam2.entity.UserVocaEntity;
 import SWTeam2.vocabulary.SWTeam2.entity.VocaEntity;
 import SWTeam2.vocabulary.SWTeam2.exception.ExceptionMessage;
+import SWTeam2.vocabulary.SWTeam2.repository.UserVocaRepository;
 import SWTeam2.vocabulary.SWTeam2.repository.VocaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +19,11 @@ import java.util.Optional;
 public class VocaService {
     @Autowired
     private VocaRepository vocaRepository;
-    public VocaService(VocaRepository vocaRepository){
+    @Autowired
+    private UserVocaRepository userVocaRepository;
+    public VocaService(VocaRepository vocaRepository, UserVocaRepository userVocaRepository){
         this.vocaRepository = vocaRepository;
+        this.userVocaRepository = userVocaRepository;
     }
 
     //단어 추가
@@ -94,7 +100,17 @@ public class VocaService {
             return vocaEntity.get().getId();
         }
     }
-
-
-
+    public String addUserVoca(VocaDto vocaDto, UserEntity user){
+        int count = userVocaRepository.countByVocaAndVocamean(vocaDto.getVoca(),vocaDto.getVocamean());
+        if(count == 0){
+            UserVocaEntity userVocaEntity = new UserVocaEntity();
+            userVocaEntity.setUser(user);
+            userVocaEntity.setVoca(vocaDto.getVoca());
+            userVocaEntity.setVocamean(vocaDto.getVocamean());
+            userVocaRepository.save(userVocaEntity);
+            return "success";
+        }else{
+            return "fail";
+        }
+    }
 }

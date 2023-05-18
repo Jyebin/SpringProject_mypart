@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>레벨 테스트 페이지</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Jua%3A400"
+    />
+    <link rel="stylesheet" href="../static/styles/scss/levelTest.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "/api/testwords",
+          dataType: "json",
+          async: false, // 순차적으로 실행함으로 중복 실행 오류를 방지함.
+        }).done(function (res) {
+          //console.log(res);
+          let i = 1;
+          res.voca.forEach((element) => {
+            //  console.log(element.boxNum, element.expirDt);
+            console.log(element); //web의 print
+            $("#words").append(
+              "<div>Q" +
+                i +
+                ". '" +
+                element.voca +
+                "' 의 뜻은 '" +
+                element.vocamean +
+                "' 이다.<br/><br/><br/><br/>" +
+                '<div className="frame-4-osE"><div className="rectangle-17-9gC"><div className="rectangle-17-uvG"></div><div className="o-SQQ">O</div></div><div className="rectangle-18-Bct"><div className="rectangle-18-x7r"></div><div className="x-4wa">X</div></div></div></div>'
+            );
+            i++;
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="item--83i">
+      <div class="rectangle-6-e24"></div>
+      <div class="rectangle-6-ne4"></div>
+      <div class="rectangle-7-YNL">레벨 테스트</div>
+      <div class="person-1-bLc">
+        <img class="person-1-LJC" src="./static/assets/person-1-t2k.png" />
+        <div class="item--t4p">마이페이지</div>
+      </div>
+      <div class="rectangle-11-y6G">포기</div>
+      <div class="rectangle-12-pcg">제출</div>
+      <div class="rectangle-2-HmA" style="overflow-y: scroll">
+        <div
+          id="words"
+          class="q1-swallow-q2-bulk-q3-stain-q4-postpone--N1v"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>

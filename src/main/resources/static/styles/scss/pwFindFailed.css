@@ -1,0 +1,123 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.item--x64 {
+  box-sizing: border-box;
+  padding-top: 21.4rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-color: #cfe3ff;
+
+  
+}
+.item--x64 .item-2-3NQ {
+  margin-right: 16.5rem;
+  width: 18.7rem;
+  height: 29rem;
+  position: relative;
+  background-size: 211.712% 104.223%;
+  background-position: -20.8901rem -0.6123rem;
+  background-image: url('../assets/-fmA.png');
+  flex-shrink: 0;
+}
+.item--x64 .itemBox {
+  margin: 0rem 14.3rem 26.2rem 0rem;
+  width: 73.5rem;
+  height: 69.8rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.item--x64 .itemBox .rectangle-2-fPn {
+  width: 73.5rem;
+  height: 50rem;
+  position: absolute;
+  left: 0;
+  top: 4.8rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+.item--x64 .itemBox .clip-1-boE {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  left: 32.8rem;
+  top: 0;
+  object-fit: cover;
+  vertical-align: top;
+}
+.item--x64 .itemBox .rectangle-5-YiU {
+  width: 16.2rem;
+  height: 7.9rem;
+  position: absolute;
+  left: 28.7rem;
+  top: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+}
+.item--x64 .itemBox .item--zaU {
+  width: 28.8rem;
+  height: 6rem;
+  position: absolute;
+  left: 22.4rem;
+  top: 11.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #f35c6e;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item--x64 .itemBox .item--suA {
+  width: 41.3rem;
+  height: 6rem;
+  position: absolute;
+  left: 16.15rem;
+  top: 26.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item--x64 .item-3-XTv {
+  width: 21rem;
+  height: 29.9rem;
+  position: relative;
+  background-size: 198.4% 102.154%;
+  background-position: -0rem -0.322rem;
+  background-image: url('../assets/-ZX6.png');
+  flex-shrink: 0;
+}

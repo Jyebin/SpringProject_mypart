@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>로그인 페이지</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua%3A400" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400" />
+  <link rel="stylesheet" href="../static/styles/scss/loginPage.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+    </script>
+  <script>
+
+
+    $(document).ready(function () {
+      $("#logBtn").click(function () {
+        let id = $("#id").val();
+        let password = $("#password").val();
+        console.log(id, password);
+        if (id == "" || password == "") {
+          alert("아이디 password는 필수입니다.");
+        }
+        if (!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i.test(id)) { // 이메일 정규식
+          $("#msg").text('아이디는 이메일 형식입니다.');
+        } else {
+          $.ajax({
+            type: "POST",
+            url: '/api/user/login',
+            dataType: "text",
+            contentType:"application/json",
+            async: false, // 순차적으로 실행함으로 중복 실행 오류를 방지함.
+            data:JSON.stringify( { email: id, password: password } )
+          }).done(function (res) {
+            console.log("로그인성공");
+            window.location.href = 'home';
+          }).catch(function (error) {
+            $('#logSate').css('display','none');
+          });
+
+        };
+      });
+
+
+      $("#logBtn").mouseleave(function () {
+        $("#msg").empty();
+        //   $.ajax({
+        //     type: "POST",
+        //     url: '/api/login/',
+        //     dataType: "json",
+        //     async: false, // 순차적으로 실행함으로 중복 실행 오류를 방지함.
+        //     data : {email:$("#id").val(), password: $("#password").val()}
+        // }).success(function(res) {
+        //     console.log("로그인성공");
+        // }).fail(function(res) {
+        //    $("#msg").text("아이디를 확인해주세요");
+        // });
+      });
+
+    });
+
+    function Confrim() {
+      $('#failedMsg').css('display','none');
+      $('#logState').css('display','block');
+          
+      // $('#controlSpot').empty();
+      // $('#controlSpot').append(
+      //   `
+      //   <div class="item--avk">로그인</div>
+      //   <div class="idText">아이디(Email) </div>
+      //   <p id="msg"></p>
+      //   <input type="text" id="id" class="inputId" placeholder="Email Address"></input>
+      //   <div class="pwText">비밀번호</div>
+      //   <input type="text" id="password" class="inputPw" placeholder="Password"></input>
+      //   <div id="test" class="aTags">
+      //     <a href="/">비밀번호찾기</a> &nbsp;|&nbsp; <a href="/joinPage">회원가입</a>
+      //   </div>
+      //   <button id="logBtn" class="logBtn">Go!</button>`);
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="wallPaper">
+    <div class="titleBox"></div>
+    <div class="titleText">수뭉보카</div>
+    <div class="itemBox">
+      <h1 class="item-900--DRz">토익 900점을 위한</h1>
+      <div id="logState">
+        <div class="auto-group-gnwk-Ucp">
+          <div class="item--avk">로그인</div>
+          <div class="idText">아이디(Email) </div>
+          <p id="msg"></p>
+          <input type="text" id="id" class="inputId" placeholder="Email Address"></input>
+          <div class="pwText">비밀번호</div>
+          <input type="text" id="password" class="inputPw" placeholder="Password"></input>
+          <div id="test" class="aTags">
+            <a href="/">비밀번호찾기</a> &nbsp;|&nbsp; <a href="/joinPage">회원가입</a>
+          </div>
+          <button id="logBtn" class="logBtn">Go!</button>
+        </div>
+      </div>
+
+      <div id="failedMsg">
+        <div class="auto-group-gnwk-Ucp">
+          <div class="failedMsg">로그인 실패</div>
+          <div class="email--hGU">
+            아이디(Email) 혹은 비밀번호를
+            <br />
+            다시 입력해주세요.
+          </div>
+          <button class="logBtn" onclick="Confrim()">확인</button>
+        </div>
+      </div>
+
+
+      <div class=" img1">
+        </div>
+        <div class="img2">
+        </div>
+      </div>
+</body>

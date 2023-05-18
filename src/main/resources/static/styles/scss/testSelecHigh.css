@@ -1,0 +1,178 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.item--5BN {
+  box-sizing: border-box;
+  padding: 3.6rem 4.2rem 22.2rem 29.5rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #cfe3ff;
+}
+.item--5BN .person-1-mK6 {
+  margin: 0rem 0rem 15.3rem 90.2rem;
+  width: 20.1rem;
+  height: 5rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.item--5BN .person-1-mK6 .person-1-6cG {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  vertical-align: top;
+}
+.item--5BN .person-1-mK6 .item--r5e {
+  width: 15.4rem;
+  height: 4rem;
+  position: absolute;
+  left: 4.7rem;
+  top: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item--5BN .rectangle-7-j9S {
+  margin: 0rem 25.3rem 8.2rem 0rem;
+  width: 85rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe {
+  margin-right: 25.3rem;
+  box-sizing: border-box;
+  padding: 16.5rem 3.1rem 2.8rem 3.1rem;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6000000238);
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-13-Jrk {
+  margin: 12.8rem 2.7rem 0rem 0rem;
+  width: 12rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-9-xgQ {
+  margin: 0rem 19.35rem 12.8rem 0rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-9-xgQ .rectangle-9-73W {
+  margin: 0rem 1.55rem 0.8rem 0rem;
+  width: 4rem;
+  height: 4rem;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-9-xgQ .item-15-pyW {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-10-xK2 {
+  margin: 0rem 1.15rem 12.8rem 0rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-10-xK2 .rectangle-10-6g8 {
+  margin: 0rem 2.05rem 0.8rem 0rem;
+  width: 4rem;
+  height: 4rem;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-10-xK2 .item-20-RiQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item--5BN .auto-group-6ue4-bBe .rectangle-12-M6G {
+  margin-top: 12.8rem;
+  width: 12rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}

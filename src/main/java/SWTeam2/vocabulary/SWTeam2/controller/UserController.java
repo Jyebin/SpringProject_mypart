@@ -1,6 +1,6 @@
 package SWTeam2.vocabulary.SWTeam2.controller;
 
-import SWTeam2.vocabulary.SWTeam2.dto.FindPasswordDto;
+import SWTeam2.vocabulary.SWTeam2.auth.CustomUserDetail;
 import SWTeam2.vocabulary.SWTeam2.dto.LoginRequestDto;
 import SWTeam2.vocabulary.SWTeam2.entity.UserEntity;
 import SWTeam2.vocabulary.SWTeam2.service.UserService;
@@ -18,14 +18,15 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -70,9 +71,31 @@ public class UserController {
     public ResponseEntity<?> findPassword(@RequestBody @Valid LoginRequestDto loginRequestDto){
         try {
             String password = userService.findPassword(loginRequestDto);
-            return ResponseEntity.ok("비밀번호 찾기 결과 : " + password);
+            return ResponseEntity.ok(password);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @GetMapping("/api/userinfo")
+    public ResponseEntity<?> userInfoByEmail(@RequestParam String email) {
+        Optional<UserEntity> userEntityOptional = userService.getUserByEmail(email);
+
+        if (userEntityOptional.isPresent()) {
+            UserEntity userEntity = userEntityOptional.get();
+            Optional<UserEntity> userInfoOptional = userService.getUserByNameAndEmailAndLevelAndStudyVocaCountAndTier(
+                    userEntity.getName(), userEntity.getEmail(), userEntity.getLevel(),
+                    userEntity.getStudyVocaCount(), userEntity.getTier());
+
+            if (userInfoOptional.isPresent()) {
+                UserEntity userInfo = userInfoOptional.get();
+                return ResponseEntity.ok(userInfo);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
 }

@@ -27,6 +27,9 @@ public class UserSignupService {
         user.setName(loginRequestDto.getName());
         user.setEmail(loginRequestDto.getEmail());
         user.setPassword(passwordEncoder.encode(loginRequestDto.getPassword()));
+        int pwlength = loginRequestDto.getPassword().length();
+        user.setPasswordHint(loginRequestDto.getPassword().substring(0,3) + "*".repeat(pwlength-3));
+        user.setTier(0);
 
         return userRepository.save(user);
     }

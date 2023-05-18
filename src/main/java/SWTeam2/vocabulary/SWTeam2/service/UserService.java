@@ -1,12 +1,10 @@
 package SWTeam2.vocabulary.SWTeam2.service;
 
-import SWTeam2.vocabulary.SWTeam2.auth.Authority;
+
 import SWTeam2.vocabulary.SWTeam2.auth.CustomUserDetail;
-import SWTeam2.vocabulary.SWTeam2.dto.FindPasswordDto;
 import SWTeam2.vocabulary.SWTeam2.dto.LoginRequestDto;
 import SWTeam2.vocabulary.SWTeam2.entity.UserEntity;
 import SWTeam2.vocabulary.SWTeam2.repository.UserRepository;
-import org.springframework.expression.spel.ast.OpAnd;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -15,10 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 @Service
@@ -31,8 +26,8 @@ public class UserService implements UserDetailsService {
     public String findPassword(LoginRequestDto loginRequestDto){
         UserEntity userEntity = userRepository.findByNameAndEmail(loginRequestDto.getName(), loginRequestDto.getEmail())
                 .orElseThrow(()->new IllegalArgumentException("해당하는 계정이 존재하지 않습니다."));
-        String password = userEntity.getPassword();
-        return password.substring(0,3) + "*****";
+        String passwordHint = userEntity.getPasswordHint();
+        return passwordHint;
     }
 
     //시큐리티 내부의 로그인 프로세스중 인증처리를 하는 메소드 중 하나
@@ -51,6 +46,14 @@ public class UserService implements UserDetailsService {
         }
         return new CustomUserDetail(user);
     }
+    public Optional<UserEntity> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 
 
+    public Optional<UserEntity> getUserByNameAndEmailAndLevelAndStudyVocaCountAndTier(
+            String name, String email, int level, int studyVocaCount, int tier) {
+        return userRepository.findByNameAndEmailAndLevelAndStudyVocaCountAndTier(
+                name, email, level, studyVocaCount, tier);
+    }
 }

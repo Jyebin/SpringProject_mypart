@@ -1,0 +1,345 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.item--mLU {
+  box-sizing: border-box;
+  padding-top: 13.9rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-color: #cfe3ff;
+}
+.item--mLU .item-2-5rx {
+  margin-right: 16.5rem;
+  width: 18.7rem;
+  height: 29rem;
+  position: relative;
+  background-size: 211.712% 104.223%;
+  background-position: -20.8901rem -0.6123rem;
+  background-image: url('../assets/-Kg4.png');
+  flex-shrink: 0;
+}
+.item--mLU .itemBox {
+  margin: 0rem 14.3rem 18.7rem 0rem;
+  width: 73.5rem;
+  height: 69.8rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.item--mLU .itemBox .rectangle-2-Jji {
+  width: 73.5rem;
+  height: 65rem;
+  position: absolute;
+  left: 0;
+  top: 4.8rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+.item--mLU .itemBox .clip-1-eYg {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  left: 32.8rem;
+  top: 0;
+  object-fit: cover;
+  vertical-align: top;
+
+  z-index: 9999;
+}
+.item--mLU .itemBox .item--bTv {
+  width: 21.8rem;
+  height: 6rem;
+  position: absolute;
+  left: 25.9rem;
+  top: 10.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item--mLU .itemBox .item--GKA {
+  width: 16.2rem;
+  height: 7.9rem;
+  position: absolute;
+  left: 48.9rem;
+  top: 56.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+
+  border: 0px;
+}
+
+.item--mLU .itemBox > button:hover{
+  color:#6273c8;
+  border: 0.5px white solid;
+}
+
+.item--mLU .itemBox .item--vuW {
+  width: 56.1rem;
+  height: 11.8rem;
+  position: absolute;
+  left: 8.8rem;
+  top: 22.3rem;
+}
+.item--mLU .itemBox .item--vuW .item--SN4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item--mLU .itemBox .item--vuW .rectangle-7-Yvt {
+  width: 100%;
+  height: 7.3rem;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 2rem;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  padding: 2rem 2.55rem;
+}
+.item--mLU .itemBox .item--UpY {
+  width: 56.35rem;
+  height: 11.8rem;
+  position: absolute;
+  left: 8.45rem;
+  top: 39.6rem;
+}
+.item--mLU .itemBox .item--UpY .email--b8U {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item--mLU .itemBox .item--UpY .rectangle-13-uex {
+  margin-left: 0.25rem;
+  width: 56.1rem;
+  height: 7.3rem;
+  border: solid 0.2rem #000000;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 2rem;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #ffffff;
+  padding: 2rem 2.55rem;
+}
+.item--mLU .itemBox .rectangle-10-2Dn {
+  width: 16.2rem;
+  height: 7.9rem;
+  position: absolute;
+  left: 8.8rem;
+  top: 56.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+  border: 0px;
+}
+.item--mLU .item-3-gp8 {
+  width: 21rem;
+  height: 29.9rem;
+  position: relative;
+  background-size: 198.4% 102.154%;
+  background-position: -0rem -0.322rem;
+  background-image: url('../assets/-gFi.png');
+  flex-shrink: 0;
+}
+
+
+.item--mLU .itemBox .rectangle-2-fPn {
+  width: 73.5rem;
+  height: 50rem;
+  position: absolute;
+  left: 0;
+  top: 4.8rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+
+.item--mLU .itemBox .rectangle-5-YiU {
+  width: 16.2rem;
+  height: 7.9rem;
+  position: absolute;
+  left: 28.7rem;
+  top: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+
+  border: 0px;
+}
+
+.item--mLU .itemBox .item--zaU {
+  width: 28.8rem;
+  height: 6rem;
+  position: absolute;
+  left: 22.4rem;
+  top: 11.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #f35c6e;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+
+.item--mLU .itemBox .item--suA {
+  width: 41.3rem;
+  height: 6rem;
+  position: absolute;
+  left: 16.15rem;
+  top: 26.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+}
+
+
+.item--mLU .itemBox .rectangle-2-whS {
+  width: 73.5rem;
+  height: 50rem;
+  position: absolute;
+  left: 0;
+  top: 4.8rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #000000;
+  font-family: Jua, "Source Sans Pro";
+  flex-shrink: 0;
+}
+
+.item--mLU .itemBox .rectangle-5-EAk {
+  width: 16.2rem;
+  height: 7.9rem;
+  position: absolute;
+  left: 28.7rem;
+  top: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: Jua, 'Source Sans Pro';
+  white-space: nowrap;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #4a5aad;
+  border-radius: 2rem;
+
+  border: 0px;
+}
+
+#error{
+  display: none;
+}
+
+#result{
+  display: none;
+}
+
+#input{
+  /* display: none; */
+}
+
+.item--mLU .itemBox .btns > button:hover{
+  color: #6273c8;
+  border: 0.5px white solid;
+}
+
+#error button:hover{
+  color: #6273c8;
+  border: 0.5px white solid;
+}
+#result button:hover{
+  color: #6273c8;
+  border: 0.5px white solid;
+}

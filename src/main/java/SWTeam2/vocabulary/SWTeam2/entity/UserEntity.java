@@ -26,6 +26,15 @@ public class UserEntity {
     @Column
     private int level = 0; //1 : 하, 2 : 중, 3 : 상
 
+    @Column
+    private int tier = 0; //bronze:0, silver:1, gold:2
+
+    @Column
+    private String passwordHint;
+
+    @Column
+    private Integer studyVocaCount; //공부한 개수
+
     public UserEntity(){}
 
     @Enumerated(EnumType.STRING)

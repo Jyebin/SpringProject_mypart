@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>비밀번호찾기 페이지</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua%3A400" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400" />
+  <link rel="stylesheet" href="../static/styles/scss/pwFind.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+</head>
+<script>
+  $(document).ready(function () {
+    $('#confirmBtn').click(function () {
+      let name = $('#name').val();
+      let id = $('#id').val();
+      console.log(name, id)
+      $.ajax({
+        type: "POST",
+        url: '/api/findpassword',
+        dataType: "json",
+        async: false, // 순차적으로 실행함으로 중복 실행 오류를 방지함.
+        data: { name: name, email: id }
+      }).done(function (res) {
+        console.log(res);
+        $('#passwordOutput').text(res);
+      }).catch(function (error) {
+        $('#input').css('display', 'none');
+        $('#error').css('display', 'block')
+      })
+    })
+  })
+
+  function HideError() {
+    $('#error').css('display', 'none');
+    $('#input').css('display', 'block');
+  }
+
+  function HideResult() {
+    $('#result').css('display', 'none');
+    $('#input').css('display', 'block');
+  }
+
+  function GoLogin() {
+    window.location.href = '/loginPage';
+  }
+</script>
+
+<body>
+  <div class="item--mLU">
+    <div class="item-2-5rx"></div>
+    <div class="itemBox">
+      <img class="clip-1-eYg"
+        src="../../../../../../Downloads/Export_HTML_20230508044445%20(1)/assets/clip-1-2XA.png" />
+      <div id="input">
+        <div class="rectangle-2-Jji"></div>
+        <div class="item--bTv">비밀번호 찾기</div>
+        <div class="item--vuW">
+          <div class="item--SN4">이름을 입력해주세요.</div>
+          <input type="text" id="name" class="rectangle-7-Yvt"></input>
+        </div>
+        <div class="item--UpY">
+          <div class="email--b8U">아이디(Email)를 입력해주세요.</div>
+          <input type="text" id="id" class="rectangle-13-uex"></input>
+        </div>
+        <div class="btns">
+          <button id="cancelBtn" class="rectangle-10-2Dn" onclick="GoLogin()">취소</button>
+          <button id="confirmBtn" class="item--GKA">완료</button>
+        </div>
+      </div>
+      <div id="error">
+        <div class="rectangle-2-fPn"></div>
+        <button class="rectangle-5-YiU" onclick="HideError()">확인</button>
+        <div class="item--zaU">비밀번호 찾기 실패</div>
+        <div class="item--suA">등록되지 않은 회원입니다.</div>
+      </div>
+
+      <div id="result">
+        <div class="rectangle-2-whS">
+          <span>허영현 회원님의 비밀번호는</span>
+          <span id="passwordOutput" style="color: #f35c6e;">123*****</span>
+          <span>입니다.</span>
+        </div>
+        <button class="rectangle-5-EAk" onclick="HideResult()">확인</button>
+      </div>
+
+    </div>
+    <div class="item-3-gp8"></div>
+  </div>
+</body>
+
+</html>
